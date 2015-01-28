@@ -27,5 +27,12 @@ public class _Test {
 		String string = toRoman.IntToRoman(number);
 		System.out.println(string);
 	}
+	@Test
+	public void RomanToIntTest() {
+		RomanNumbers toInt = new RomanNumbers();
+		String roman= "MCCXII";
+		int integ = toInt.RomanToInt(roman);
+		System.out.println(integ);
+	}
 
 }

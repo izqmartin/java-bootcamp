@@ -58,4 +58,27 @@ public class RomanNumbers {
 		}
 		return s;
 	}
+	
+	public int RomanToInt(String roman){
+		int integ=0;
+		char[] rom= roman.toCharArray();
+		for(int i=0;i<rom.length;i++){
+			switch(rom[i]){
+			case 'M': integ+=1000;
+						break;
+			case 'C': integ+=100;
+						break;
+			case 'L': integ+=50;
+						break;
+			case 'X': integ+=10;
+						break;
+			case 'V': integ+=5;
+						break;
+			case 'I': integ+=1;
+						break;
+			}
+		}
+		return integ;
+	}
+	
 }
