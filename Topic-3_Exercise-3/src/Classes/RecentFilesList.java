@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class RecentFilesList {
 	
 	ArrayList<String> list = new ArrayList();
-	
+
 	public void Open(String file){
 		int flag=0;
 		for(int i=0;i<=list.size()-1;i++){
