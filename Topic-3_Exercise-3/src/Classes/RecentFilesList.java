@@ -27,8 +27,13 @@ public class RecentFilesList {
 		}
 		}
 	
-	public void Show(){
-		System.out.println(list + "      cantidad de objetos:"  + list.size());
+	@Override
+	public String toString() {
+		return "RecentFilesList [list=" + list + "]" +  "      cantidad de objetos:"  + list.size();
+	}
+	
+	public String Show(){
+		return toString();
 	}
 }
 
