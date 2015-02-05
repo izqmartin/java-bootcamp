@@ -38,6 +38,11 @@ public class RecentFilesList {
 	public void Show(){
 		System.out.println("\nList of Recent Posts: " + list);
 	}
+	
+	@Override
+	public String toString(){
+		return "List of Recent Posts: " + list;
+	}
 }
 
 

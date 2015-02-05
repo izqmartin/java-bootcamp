@@ -3,6 +3,7 @@ package Tests;
 //import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,6 +27,7 @@ public class _Test {
 		AmountToText amountToText = new AmountToText();
 		String text = amountToText.convertToText(amount);
 		System.out.println(text);
+		Assert.assertEquals("", "nine thousand nine hundred nineteen and 11/100 dollars", text);
 	}
 	
 	@Test
@@ -34,6 +36,7 @@ public class _Test {
 		int number= 5;
 		int position=2;
 		System.out.println(amountToText.convertionTable(number,position));
+		Assert.assertEquals("", "five hundred", amountToText.convertionTable(number,position));
 	}
 
 }

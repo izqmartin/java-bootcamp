@@ -7,12 +7,30 @@ public class Blog {
 	private RecentFilesList recentEntrys = new RecentFilesList();
 	
 	
-	public void PostEntry(String title,String text,String tag){
+	
+	public ArrayList<Entry> getList() {
+		return list;
+	}
+
+	public void setList(ArrayList<Entry> list) {
+		this.list = list;
+	}
+
+	public RecentFilesList getRecentEntrys() {
+		return recentEntrys;
+	}
+
+	public void setRecentEntrys(RecentFilesList recentEntrys) {
+		this.recentEntrys = recentEntrys;
+	}
+
+	public String PostEntry(String title,String text,String tag){
 		Entry entry=new Entry(title,text,tag);
 		list.add(entry);
 		System.out.println("\nAll posts: " + list);
 		recentEntrys.Open(entry);
 		recentEntrys.Show();
+		return recentEntrys.toString();
 	}
 	
 	public void DeleteEntry(String title,String text,String tag){
@@ -40,7 +58,7 @@ public class Blog {
 		recentEntrys.Show();
 	}
 	
-	public void TagSearch(String tag){
+	public String TagSearch(String tag){
 		ArrayList<Entry> tagList = new ArrayList<Entry>();
 		Entry entry=new Entry("","",tag);
 		for(int i=0;i<=list.size()-1;i++){
@@ -50,9 +68,10 @@ public class Blog {
 			}
 		}
 		System.out.println("\n TAG Search \""+ tag + "\" : " + tagList);
+		return "TAG Search \""+ tag + "\" : " + tagList;
 	}
 	
-	public void AllTags(){
+	public String AllTags(){
 		ArrayList<String> tagList = new ArrayList<String>();
 		String tag=list.get(0).getTag();
 		tagList.add(tag);
@@ -65,5 +84,6 @@ public class Blog {
 			
 		}
 		System.out.println("\n TAG List : " + tagList);
+		return "TAG List : " + tagList;
 	}
 }

@@ -1,6 +1,7 @@
 package Test;
 
 import static org.junit.Assert.*;
+import junit.framework.Assert;
 
 import org.junit.After;
 import org.junit.Before;
@@ -20,19 +21,21 @@ public class _Test {
 		System.out.println("Ending");
 	}
 	
+
 	@Test
 	public void IntToRomanTest() {
 		RomanNumbers toRoman = new RomanNumbers();
 		int number= 1212;
 		String string = toRoman.IntToRoman(number);
 		System.out.println(string);
+		Assert.assertEquals("MCCXII", string);
 	}
 	@Test
 	public void RomanToIntTest() {
 		RomanNumbers toInt = new RomanNumbers();
-		String roman= "MCCXII";
-		int integ = toInt.RomanToInt(roman);
+		int integ = toInt.RomanToInt("MCCXII");
 		System.out.println(integ);
+		Assert.assertEquals(1212, integ);
 	}
 
 }

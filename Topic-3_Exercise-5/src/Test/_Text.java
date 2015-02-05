@@ -3,6 +3,7 @@ package Test;
 import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,6 +26,7 @@ public class _Text {
 	    Soundex soundex = new Soundex();
         String sound = soundex.SoundexConverter(string);
         System.out.println("\""+ string + "\" in soundex codification is: " + sound);
+        Assert.assertEquals("H400", sound);
 	}
 
 }
