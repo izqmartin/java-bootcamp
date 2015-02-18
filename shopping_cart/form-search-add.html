@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>search and add products!</title>
+</head>
+<body>
+ <form method="POST" action="http://localhost:8080/products/search">
+    <fieldset>
+      <p ALIGN=center><legend>Search Products</legend>
+      <label><input placeholder="product name" type="text" name="query" value=""></label>
+      <input type="submit" value="search"></p>
+    </fieldset>
+  </form>
+
+  <form method="POST" action="http://localhost:8080/shopping-cart/add-product">
+    <fieldset>
+     <p ALIGN=center> <legend>Add Product</legend>
+      <label><input placeholder="Product ID" type="text" name="product_id" value=""></label>
+      <label><input placeholder="Quantity" type="text" name="quantity" value=""></label>
+      <input type="submit" value="add"></p>
+    </fieldset>
+   </form>
+
+   <form method="POST" action="http://localhost:8080/shopping-cart/buy">
+    <fieldset>
+     <p ALIGN=center> 
+     <input type="submit" value="buy cart"></p>
+    </fieldset>
+  </form>
+  <ul>
+    <li><a href="form-signin.html">sign In</a></li>
+    <li><a href="form-login.html">Log In</a></li>
+    <li><a href="form-search-add.html">search/add product</a></li>
+    <li><a href="http://localhost:8080/products">List Products</a></li>
+    <li><a href="http://localhost:8080/products/categories/electronics">List electronics</a></li>
+    <li><a href="http://localhost:8080/products/categories/furniture">List furnitures</a></li>
+    <li><a href="http://localhost:8080/products/categories/vehicles">List vehicles</a></li>
+    <li><a href="http://localhost:8080/shopping-cart">Shopping Cart</a></li>
+  </ul>
+
+
+</body>
+</html>
